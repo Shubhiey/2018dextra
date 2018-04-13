@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="img/isf.jpg">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1{
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: linear-gradient(to left bottom, #040507, #0e151b, #0e2128, #092e34, #053b3b);
+  height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
+</head>
+<body onload=typeWriter()>
+  <div class="bgimg-1">
+    <div class="caption">
+      <a href="dextra.html" style="text-decoration:none;"><span class="border" id="message"></span></a><br>
+    </div>
+  </div>    
+  <script>
+      var i = 0;
+      var txt = 'Welcome to DEXTRA 2018.Click to enter.';
+      var speed = 70;    
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("message").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+  </script>
+</body>
+</html>
